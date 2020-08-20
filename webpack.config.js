@@ -14,11 +14,8 @@ module.exports = {
     filename: "[name].js",
   },
   target: "node",
-  externals: [nodeExternals()],
+  externals: [nodeExternals()], // this tells webpack not to bundle anything from node_modules folder
   module: {
-    rules: [
-      // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-      { test: /\.tsx?$/, loader: "ts-loader" },
-    ],
+    rules: [{ test: /\.tsx?$/, loader: "ts-loader" }],
   },
 };
