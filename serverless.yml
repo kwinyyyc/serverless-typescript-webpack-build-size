@@ -3,6 +3,12 @@ service:
 #app: your-app-name
 #tenant: your-tenant-name
 
+custom:
+  webpack:
+    includeModules: true # this is telling webpack to reference all dependencies (non-dev dependencies) in node_modules and serverless would upload the package.json with the node_modules folder
+    forceExclude:
+      - aws-sdk # this is available in the lambda environment so it can be excluded, this tells serverless-webpack not to include it in the node_modules folder
+
 # Add the serverless-webpack plugin
 plugins:
   - serverless-webpack
