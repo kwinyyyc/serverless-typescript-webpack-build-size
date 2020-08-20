@@ -1,0 +1,10 @@
+{
+  "name": "myTypeScriptService",
+  "version": "1.0.0",
+  "description": "Packaged externals for myTypeScriptService",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "uuid": "^8.3.0"
+  }
+}
