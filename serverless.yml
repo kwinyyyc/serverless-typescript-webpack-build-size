@@ -3,6 +3,10 @@ service:
 #app: your-app-name
 #tenant: your-tenant-name
 
+custom:
+  webpack:
+    includeModules: false # this is the default value, that means serverless webpack would not create the node_modules folder
+
 # Add the serverless-webpack plugin
 plugins:
   - serverless-webpack
